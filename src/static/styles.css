@@ -92,12 +92,72 @@ section h3 {
 }
 
 .participants-list {
-  margin-left: 18px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
   color: #0d47a1;
 }
 
-.participants-list li {
-  margin-bottom: 4px;
+.participant-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 6px 8px;
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 6px;
+  border: 1px solid rgba(207, 227, 255, 0.8);
+}
+
+.participant-name {
+  font-size: 14px;
+}
+
+.participant-remove {
+  border: 1px solid #f3b7b7;
+  background: linear-gradient(135deg, #fff1f1, #ffd9d9);
+  color: #9b1c1c;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  line-height: 1;
+  text-align: center;
+  padding: 6px 10px;
+  box-shadow: 0 3px 6px rgba(155, 28, 28, 0.15);
+  transition: transform 0.15s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.participant-remove:hover {
+  background: linear-gradient(135deg, #ffe6e6, #ffc7c7);
+  transform: translateY(-1px) scale(1.03);
+  box-shadow: 0 5px 10px rgba(155, 28, 28, 0.2);
+}
+
+.participant-remove:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 2px 4px rgba(155, 28, 28, 0.2);
+}
+
+.participant-remove:focus-visible {
+  outline: 2px solid #ff8a80;
+  outline-offset: 2px;
+}
+
+.participant-remove-icon {
+  width: 14px;
+  height: 14px;
+  display: block;
+}
+
+.participant-remove-text {
+  font-size: 12px;
+  letter-spacing: 0.2px;
 }
 
 .participants-empty {
